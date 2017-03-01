@@ -1,4 +1,5 @@
-Using discord
+Using discord;
+
 Class program
 {
 Static void main (string[] args) => new program().start();
@@ -8,3 +9,15 @@ Private discordclient _client;
 Public void start()
 {
 _client=new discordclient();
+_client.messagereceived += async (s, e) =>
+{
+If (!e.message.isAuthor)
+Await e.channel.sendmessage(e.message.text);
+};
+_client.executeAndWait(async()=>{
+Await _client.connect("Mjg2MjM1NDIzMTc1MzQ0MTMw.C5glVg.QvpWPH8ldDqUtHoJxT7Vaty6Dco", tokenType.bot)
+});
+}
+
+
+}
