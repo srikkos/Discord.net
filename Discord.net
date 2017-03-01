@@ -1,0 +1,10 @@
+Using discord
+Class program
+{
+Static void main (string[] args) => new program().start();
+
+
+Private discordclient _client;
+Public void start()
+{
+_client=new discordclient();
